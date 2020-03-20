@@ -7,9 +7,9 @@ body {
 }
 .container {
     display: grid;
-    grid-template-columns: [first] 15% [second] 15% [third]  [fourth] 40% [fifth] 40%;
+    grid-template-columns: [first] 20% [second] 20% [third] auto [fourth] 20% [fifth] 20%;
     grid-template-rows:[row1] 8% [row2] 6% [row3] auto [row4] 20% [row5] 10%;
-    background-color: rgb(236, 200, 456);
+    background-color: rgb(245, 220, 456);
     position: absolute;
     width: 100%;
     min-height: 100%;
@@ -18,9 +18,10 @@ body {
 }
 
 .container > div {
-    background-color: rgba(121, 252, 191,.7);
+    background-color: rgba(121, 252, 191,.5);
     color: rgb(214, 103, 241);
     padding: 4px;
+    line-height: 100%;
 }
 
 .header {
@@ -29,9 +30,10 @@ body {
     grid-row-end: row2;
     font-size:32px;
     font-family:cursive;
-    text-align: center;
-   
+    text-align: center; 
+  
 }
+
 .navBar {
     grid-column: 1/6;
     grid-row: 2/3;
@@ -84,4 +86,13 @@ li a:hover {
     grid-column:1/6;
     grid-row:5;
     text-align: center;
+}
+
+.asideBar {
+    display: block;
+    background-color: rgb(245, 220, 456);
+    border-radius: 8px;
+    padding: 8px 8px;
+    margin: 8px;
+    height: 30 px;
 }
