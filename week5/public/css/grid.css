@@ -42,16 +42,18 @@ body {
     font-weight: bold;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
+.navBar ul {
     display: inline-block;
 }
 
-li {
+.navBar li {
     display:inline-block;
     padding: 8px 8px 12px;
     text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
 }
 
  a {

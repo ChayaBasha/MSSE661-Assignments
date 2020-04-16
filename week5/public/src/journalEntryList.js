@@ -2,8 +2,8 @@
     const journalEntries = await getJournalEntries();
     console.log(journalEntries);
   
-    if (jounralEntries.length) {
-      const entryElement = document.getElementById('jounralEntries');
+    if (journalEntries.length) {
+      const entryElement = document.getElementById('journalEntries');
       const loadingEntryElement = entryElement.childNodes[1];
   
       const ul = document.createElement('ul');
@@ -15,27 +15,29 @@
       journalEntries.map((journalEntry) => {
         // building blocks
         const li = document.createElement('li');
-        li.className = 'task-item';//this needs a name
+        li.className = 'journalEntry-li';
         const block = document.createElement('div');
-        block.className = 'task-item-block';//this needs a new name too
+        block.className = 'journalEntry-block';//this needs styling
   
         //   content
 
-        const nameSpan = document.createElement('span');
-        nameSpan.className = 'task-name';//this nees a new name too
-        nameSpan.innerText = journalEntry.name;
+        const nameSpan = document.createElement('div');
+        nameSpan.className = 'journalEntry-name flex-child';//this nees a new name too
+        nameSpan.innerText = journalEntry.entryName;
+
+        //TO DO Need to make it so the entries are clickable from this list and these bodies should display on new screen
   
-        const bodySpan = document.createElement('span');
-        bodySpan.className = 'task-status';
-        bodySpan.innerText = journalEntry.entryBody;
+        // const bodySpan = document.createElement('span');
+        // bodySpan.className = 'journalEntry-body';
+        // bodySpan.innerText = journalEntry.entryBody;
   
-        const dateSpan = document.createElement('span');
-        dateSpan.className = 'task-date';
+        const dateSpan = document.createElement('div');
+        dateSpan.className = 'journalEntry-date flex-child';
         dateSpan.innerText = journalEntry.dateCreated;
   
         // add list item
         block.appendChild(nameSpan);
-        block.appendChild(bodySpan);
+        // block.appendChild(bodySpan);
         block.appendChild(dateSpan);
   
         li.appendChild(block);
