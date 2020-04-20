@@ -6,8 +6,12 @@ function getJournalEntries() {
 
 function addJournalEntry(entryData) {
   _post(JOURNALENTRY_API, entryData);
+};
+
+function getJournalEntry(journalEntryId) {
+  return _get(`${JOURNALENTRY_API}/${journalEntryId}`).then(res => res.json());
 }
 
-function deleteEntry (jounralEntryId) {
-  _delete(`$JOURNALENTRY_API}/${jounralEnrtyId}`);
+function deleteEntry (journalEnrtyId) {
+  return _delete(`${JOURNALENTRY_API}/${journalEnrtyId}`);
 }

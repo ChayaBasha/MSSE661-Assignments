@@ -17,12 +17,14 @@
         const li = document.createElement('li');
         li.className = 'journalEntry-li';
         const block = document.createElement('div');
-        block.className = 'journalEntry-block';//this needs styling
-  
+        block.className = 'journalEntry-block';
+        //TO DO get it so you can click each tiem 
+        li.addEventListener('click', function(_mouseEvent){getJournalEntry(journalEntry._id)}); 
+         
         //   content
 
         const nameSpan = document.createElement('div');
-        nameSpan.className = 'journalEntry-name flex-child';//this nees a new name too
+        nameSpan.className = 'journalEntry-name flex-child';
         nameSpan.innerText = journalEntry.entryName;
 
         //TO DO Need to make it so the entries are clickable from this list and these bodies should display on new screen
@@ -45,3 +47,6 @@
       });
     }
   })();
+
+
+  

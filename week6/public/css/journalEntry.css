@@ -1,8 +1,23 @@
 .journalEntry-li{
+    margin: 4px;
     width: 100%;
     padding: .5em;
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
 }
+.jounralEntry-li li:hover {
+    color: rgb(221, 107, 177);
+    background-color: #DDD;
+    left: 2px;
+  }
 
+  .journalEntry-li li.selected {
+    background-color: rgb(19, 101, 136);
+    color: white;
+  }
+
+ 
 .journalEntry-block{
 
  display: flex;
@@ -21,16 +36,16 @@ justify-content: space-between;
 }
 
 .buttonStyle1 {
-    font-size: 2em;
+    font-size: 1.5em;
     
 }
 
 .journalName {
-    width: 40em;
+    width: 60em;
     height: 3em;
 }
 .journalBody {
-    width: 40em;
+    width: 60em;
     height: 40em;
     box-sizing: border-box;
     

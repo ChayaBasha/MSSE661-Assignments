@@ -5,7 +5,7 @@ function _get(url) {
         'auth-token': authTokenHeader(),
        
       }
-    }).catch(handleRequestFailure);
+    }).then(handleRequestFailure);
   }
   
   function _post(url, data) {
@@ -15,7 +15,7 @@ function _get(url) {
         'Content-Type': 'application/json', 'auth-token': authTokenHeader()
       },
       body: JSON.stringify(data) 
-    }).catch(handleRequestFailure);
+    }).then(handleRequestFailure);
   }
   
   function _put(url, data) {
@@ -25,7 +25,7 @@ function _get(url) {
         'Content-Type': 'application/json', 'auth-token': authTokenHeader()
       },
       body: JSON.stringify(data)
-    }).catch(handleRequestFailure);
+    }).then(handleRequestFailure);
   }
 
   function _delete(url) {
@@ -42,10 +42,19 @@ function _get(url) {
       return "Bearer" + " " + access_token
     }
   }
-
+//TO Do: body stream is locked and not doing the logout
   function handleRequestFailure(failedReq){
-    if (failedReq.status == 403 && failedReq.json().msg == "Invalid Token") {
-      doLogout();
+    console.log(failedReq);
+    if(failedReq.status== 401){
+      logout();
+      window.location.href= '/';
     }
-    else {throw failedReq};
+    if (failedReq.status == 403) {if(failedReq.json().msg == "Invalid Token") {
+      logout();
+      window.location.href= '/';
+    } 
+     logout();
+     window.location.href= '/';
+  }
+    return failedReq;
   }
