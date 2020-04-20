@@ -19,13 +19,24 @@
             </div>
            
             <div class="mainContent">
-                <h1>Welcome to My Journal Keeper</h1>
-                <div id="journalEntries">
-                    <div> Loading...</div>
-                </div>
-               
+                <h1> Write it Out</h1>
+                <div class="journalNav">
+                    <button class="buttonStyle1"> <a href="./home.html"> <= </a></button>
+                    <button class="buttonStyle1" onclick="doAddJournalEntry(event)">+</button>
+                    </div>
+                    <br>
+                    <form>
+                   <label for="entryName"></label>
+                   <textarea class="journalName" type="text" id="entryName" journalEntryName="entryName" placeholder="Title"></textarea>
+                   <br>
+                   <br>
+                   <label for="entryBody"></label>
+                   <textarea class="journalBody" type="text" id="entryBody" name="entryBody" placeholder="what's on your mind"></textarea>
+                   </form>
+                   <br>
+                   
              </div>
-            
+           
             <div class="footer">
                 Footer
             </div>
@@ -36,7 +47,9 @@
             <script src="./src/journalEntry.service.js"></script>
             <script src="./src/route-guard.js"></script>
             <script src="./src/journalEntryList.js"></script>
-            <script src="./src/app.js"></script>
+            <script src="./src/addNewEntry.js"></script>
+            
+       
         
         </body>
     </head>

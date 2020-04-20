@@ -1,0 +1,37 @@
+.journalEntry-li{
+    width: 100%;
+    padding: .5em;
+}
+
+.journalEntry-block{
+
+ display: flex;
+ width: 100%;
+align-items: baseline;
+justify-content: space-between;
+}
+.journalEntry-name {
+    padding: 8px;
+    font-size: 1.5em;
+}
+
+.journalEntry-date {
+   width: 40%;
+   text-align: left;
+}
+
+.buttonStyle1 {
+    font-size: 2em;
+    
+}
+
+.journalName {
+    width: 40em;
+    height: 3em;
+}
+.journalBody {
+    width: 40em;
+    height: 40em;
+    box-sizing: border-box;
+    
+}

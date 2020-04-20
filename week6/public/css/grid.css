@@ -61,6 +61,7 @@ ul {
     text-decoration: none;
 }
 
+
 li a:hover {
     background-color: darkcyan;
 
@@ -71,7 +72,7 @@ li a:hover {
     grid-row:3/5;
     font-family: fantasy;
     font-weight: bold;
-    text-align: center;
+    text-align: center
 }
 
 .footer {
