@@ -9,7 +9,10 @@ function addJournalEntry(entryData) {
 };
 
 function getJournalEntry(journalEntryId) {
-  return _get(`${JOURNALENTRY_API}/${journalEntryId}`).then(res => res.json());
+  console.log(journalEntryId);
+  if (journalEntryId) {
+    return _get(`${JOURNALENTRY_API}/${journalEntryId}`).then(res => res.json());
+  }
 }
 
 function deleteEntry (journalEnrtyId) {

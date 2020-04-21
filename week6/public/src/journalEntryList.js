@@ -19,19 +19,16 @@
         const block = document.createElement('div');
         block.className = 'journalEntry-block';
         //TO DO get it so you can click each tiem 
-        li.addEventListener('click', function(_mouseEvent){getJournalEntry(journalEntry._id)}); 
+        li.addEventListener('click', function(_mouseEvent){
+          window.location.href = "/journalEntry.html?id="+journalEntry._id;
+        }
+        ); 
          
         //   content
 
         const nameSpan = document.createElement('div');
         nameSpan.className = 'journalEntry-name flex-child';
         nameSpan.innerText = journalEntry.entryName;
-
-        //TO DO Need to make it so the entries are clickable from this list and these bodies should display on new screen
-  
-        // const bodySpan = document.createElement('span');
-        // bodySpan.className = 'journalEntry-body';
-        // bodySpan.innerText = journalEntry.entryBody;
   
         const dateSpan = document.createElement('div');
         dateSpan.className = 'journalEntry-date flex-child';

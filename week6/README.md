@@ -2,12 +2,16 @@
 - Add Jounral Entry Works
 - Display only journal entries for a particular user works
 - Fixed unauthorized handler to logout and redirect to home page 
+- Journal Entries are clickable and go to a new page with just that entry 
+- token times out and redirects to home page 
+- added the about page
 
 
 # TO DO Still
-- Journal Entries should be clickable so that you can go to Jounral Body on new screen and view/edi
-- Need to test pathway to see if it successfuly logs out when token timer is up and no activity 
-- Need front end to delete
+- Need to add delete functionality (some of backend done already)
+- Need to fix back and other buttons for full flow of navigation through page
+- issue with footer on about page
+- need update funcitonality 
 
 
  
