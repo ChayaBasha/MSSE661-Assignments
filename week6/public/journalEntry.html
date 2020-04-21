@@ -2,28 +2,25 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
-        <link rel="stylesheet" type="text/css" href="css/forms.css">
         <link rel="stylesheet" type="text/css" href="css/journalEntry.css">
 
         <body class="container">
             <div class="header">
-                My Jounral Keeper
+                Journal Keeper
 
             </div>
             <div class="navBar">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="./">Home</a></li>
                     <li><a href="./about.html">About</a></li>
                     <li id="logout"><a href="/" onclick="doLogout(event)">Logout</a></li> 
                 </ul>
             </div>
-           
             <div class="mainContent">
-                <h1>Welcome to My Journal Keeper</h1>
-                <div id="journalEntries">
+                <div id="journalEntry">
                     <div> Loading...</div>
                 </div>
-               
+                
              </div>
             
             <div class="footer">
@@ -35,9 +32,8 @@
             <script src="./src/auth.service.js"></script>
             <script src="./src/journalEntry.service.js"></script>
             <script src="./src/route-guard.js"></script>
-            <script src="./src/journalEntryList.js"></script>
+            <script src="./src/journalEntry.js"></script>
             <script src="./src/app.js"></script>
-        
         </body>
     </head>
 </html>

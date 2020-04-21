@@ -3,11 +3,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
         <link rel="stylesheet" type="text/css" href="css/forms.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/journalEntry.css">
 
         <body class="container">
             <div class="header">
-                My Jounral Keeper
+                My Journal Keeper
 
             </div>
             <div class="navBar">
@@ -19,13 +20,23 @@
             </div>
            
             <div class="mainContent">
-                <h1>Welcome to My Journal Keeper</h1>
-                <div id="journalEntries">
-                    <div> Loading...</div>
-                </div>
-               
+                <h1> Write it Out</h1>
+                <div class="journalNav">
+                    <a href="./home.html"><i class="fa fa-backward"> </i> </a>
+                    <i class="fa fa-plus" onclick="doAddJournalEntry(event)"></i>
+                    </div>
+                    <form>
+                   <label for="entryName"></label>
+                   <textarea class="journalName" type="text" id="entryName" journalEntryName="entryName" placeholder="Title"></textarea>
+
+                   <br>
+                   <label for="entryBody"></label>
+                   <textarea class="journalBody" type="text" id="entryBody" name="entryBody" placeholder="what's on your mind"></textarea>
+                   </form>
+                   <br>
+                   
              </div>
-            
+           
             <div class="footer">
                 Footer
             </div>
@@ -36,7 +47,9 @@
             <script src="./src/journalEntry.service.js"></script>
             <script src="./src/route-guard.js"></script>
             <script src="./src/journalEntryList.js"></script>
-            <script src="./src/app.js"></script>
+            <script src="./src/addNewEntry.js"></script>
+            
+       
         
         </body>
     </head>

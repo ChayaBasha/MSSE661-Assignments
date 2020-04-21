@@ -21,7 +21,7 @@ body {
     background-color: rgba(121, 252, 191,.5);
     color: rgb(214, 103, 241);
     padding: 4px;
-    line-height: 100%;
+    line-height: 175%;
 }
 
 .header {
@@ -57,11 +57,21 @@ ul {
 }
 
  a {
-    color: rgb(214, 103, 241);
     text-decoration: none;
 }
+a:link {
+    color: rgb(214, 103, 241);
+}
+a:visited {
+    color: purple;
+}
 
-li a:hover {
+.link {
+    text-decoration: underline;
+}
+
+
+a:hover {
     background-color: darkcyan;
 
 }
@@ -72,6 +82,20 @@ li a:hover {
     font-family: fantasy;
     font-weight: bold;
     text-align: center;
+    font-size: 1.5em;
+}
+h1 {
+    font-size: 2em;
+}
+
+.focusBox1 {
+    width: 50%;
+    position: left;
+    text-align: left;
+    padding: 2em;
+    list-style-type: none;
+    border-radius: 8px;
+    margin: 8px;
 }
 
 .footer {
