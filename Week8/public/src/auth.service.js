@@ -12,3 +12,7 @@ function logout() {
   clearStorage('isAuth');
   clearStorage('access_token');
 };
+
+function updateUser(formData) {
+  _put(`${USER_API}/update`, formData);
+}
