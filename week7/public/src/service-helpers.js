@@ -30,11 +30,13 @@ function _get(url) {
 
   function _delete(url) {
     return fetch(url, {
-      method: 'DELETE'
-    });
-    return res.json();
+      method: 'DELETE',
+      headers: {
+        'auth-token': authTokenHeader(),
+      }
+    }).then(handleRequestFailure);
 
-  } 
+  } ;
 
   function authTokenHeader() {
     const access_token = getStorage('access_token');
