@@ -16,11 +16,9 @@ class Journal {
 
 
     const nameSpan = document.createElement('div');
-    // nameSpan.className = 'journalEntry-name flex-child';
     nameSpan.innerText = journalEntry.entryName;
 
     const dateSpan = document.createElement('div');
-    // dateSpan.className = 'journalEntry-date flex-child';
     dateSpan.innerText = journalEntry.dateCreated;
 
     const deleteButton = document.createElement('button');

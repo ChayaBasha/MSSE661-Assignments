@@ -2,7 +2,6 @@ const doLogin = function(event) {
   event.preventDefault();
   const userName = document.getElementById('userName').value;
   const password = document.getElementById('password').value;
-
   login({
     userName: userName,
     password: password
