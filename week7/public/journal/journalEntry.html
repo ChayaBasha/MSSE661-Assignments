@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../css/forms.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../css/journalEntry.css">
-        
+
         <body class="container">
             <div class="header">
                 My Journal Keeper
@@ -14,20 +14,17 @@
             <div class="navBar">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
+                    <li><a href="./about.html">About</a></li>
                     <li id="logout"><a href="/" onclick="doLogout(event)">Logout</a></li> 
                 </ul>
             </div>
            
             <div class="mainContent">
-                <h1>Welcome to My Journal Keeper</h1>
-                <div class="journalNav">
-                <a href="/"><i class="fa fa-backward"> </i> </a>  
-                <a href="./newEntry.html"><i class="fa fa-plus"></i></a>
+                <h1 id="journalEntryName"> </h1>
+                <div id="journalEntryBody">
                 </div>
-                <div id="journalEntries"> Create some Journal Entries </div>
-                </div>
-               
+                <button onclick= "showJournalEntry(event)"> <a href="updateEntry.html">Update</a></button>
+    
              </div>
            
             <div class="footer">
@@ -41,9 +38,10 @@
             <script src="../src/route-guard.js"></script>
             <script src="./journal-api.service.js"></script>
             <script src="./journal.service.js"></script>
-            <script src="./addNewEntry.js"></script>
+            <script src="./journalEntry.js"></script>
             <script src="../app.js"></script>
             
+       
         
         </body>
     </head>

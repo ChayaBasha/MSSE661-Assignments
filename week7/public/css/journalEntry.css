@@ -55,3 +55,6 @@ button {
     box-sizing: border-box;
     
 }
+.journalEntryName {
+    color: rgb(214, 103, 241);
+}

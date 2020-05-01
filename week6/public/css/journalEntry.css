@@ -6,7 +6,7 @@
     padding: 4px;
     cursor: pointer;
 }
-.jounralEntry-li li:hover {
+.journalEntry-li li:hover {
     color: rgb(221, 107, 177);
     background-color: #DDD;
     left: 2px;

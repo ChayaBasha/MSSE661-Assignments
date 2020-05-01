@@ -1,25 +1,31 @@
-(async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const journalEntryId = urlParams.get("id");
-    const journalEntry = await getJournalEntry(journalEntryId);
-    console.log(journalEntry);
-    
-    if (journalEntry) {
-        const journalEntryElement = document.getElementById('journalEntry');
-        const loadingElement = journalEntryElement.childNodes[1];
-        
-        const block = document.createElement('div');
-  
-      // replace 'loading...' with list
-      journalEntryElement.replaceChild(block, loadingElement); // <- order is important here!
-  
-      const journalEntryTitle = document.createElement('h1');
-      journalEntryTitle.innerText = journalEntry.entryName;
-    
-      const journalEntryBody = document.createElement('p');
-      journalEntryBody.innerText = journalEntry.entryBody;
+function showJournalEntryName(journalEntryName){
+  const journalEntryNameElement = document.getElementById('journalEntryName');
+  if(journalEntryName) {
+    journalEntryNameElement.textContent=journalEntryName;
+  }
+};
 
-      block.appendChild(journalEntryTitle);
-      block.appendChild(journalEntryBody);
-    };
-})();
+function showJournalEntryBody(journalEntryBody) {
+  const journalEntryBodyElement = document.getElementById('journalEntryBody');
+  if(journalEntryBody) {
+    journalEntryBodyElement.textContent=journalEntryBody;
+  }
+};
+
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const journalEntryName = urlParams.get('journalEntryName');
+const journalEntryBody = urlParams.get('journalEntryBody');
+const journalEntryDate = urlParams.get('journalEntryDate');
+
+showJournalEntryName(journalEntryName);
+showJournalEntryBody(journalEntryBody);
+
+
+function showJournalEntry(journalEntryName, journalEntryBody, journalEntryDate) {
+  document.getElementById('entryName').value = journalEntryName;
+  
+} 
+
+showJournalEntry(journalEntryName, journalEntryBody, journalEntryDate);

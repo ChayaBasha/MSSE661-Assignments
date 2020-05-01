@@ -31,6 +31,10 @@ class Journal {
       });
     };
 
+    entryRow.addEventListener('click', function(_mouseEvent) {
+      window.location.href = `./journalEntry.html?journalEntryId=${journalEntry._id}&journalEntryName=${encodeURIComponent(journalEntry.entryName)}&journalEntryBody=${encodeURIComponent(journalEntry.entryBody)}&journalEntryDate=${encodedURIComponent(journalEntry.dateCreated)}`;
+    })
+
     entryRow.append(nameSpan);
     entryRow.append(dateSpan);
     entryRow.append(deleteButton);
@@ -95,6 +99,18 @@ class Journal {
     return res;
   
   };
+
+  updateJournalEntry = async (journalEntryId) => {
+    const res = await this.journalEntryService.updateJournalEntry(journalEntryId);
+
+    if(res.status === 200) {
+      this.journalEntries = this.journalEntries.map((journalEntry) => {
+        if(journalEntry._id === updatedJournalEntry._id){
+          return journalEntry.assign(journalEntry, updatedJournalEntry)
+        }
+      });
+    }
+  }
 
   show = async () => {
     const journalEntries = await this.journalEntryService.getJournalEntries();
