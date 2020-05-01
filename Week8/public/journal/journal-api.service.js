@@ -25,4 +25,8 @@ getJournalEntry(journalEntryId) {
 deleteJournalEntry(journalEnrtyId) {
   return _delete(`${JOURNALENTRY_API}/${journalEnrtyId}`);
 };
+
+updateJournalEntry(journalEntryId, entryData) {
+  return _post(`${JOURNALENTRY_API}/${journalEntryId}`, entryData).then(res => res.json());
+}
 }

@@ -84,6 +84,7 @@ class Journal {
     window.location.href = 'journal.html';
   };
 
+
   deleteJournalEntry = async (journalEntryId) => {
   
     const res = await this.journalEntryService.deleteJournalEntry(journalEntryId);
