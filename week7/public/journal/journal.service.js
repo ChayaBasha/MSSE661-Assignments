@@ -32,7 +32,7 @@ class Journal {
     };
 
     entryRow.addEventListener('click', function(_mouseEvent) {
-      window.location.href = `./journalEntry.html?journalEntryId=${journalEntry._id}&journalEntryName=${encodeURIComponent(journalEntry.entryName)}&journalEntryBody=${encodeURIComponent(journalEntry.entryBody)}&journalEntryDate=${encodedURIComponent(journalEntry.dateCreated)}`;
+      window.location.href = `./journalEntry.html?journalEntryId=${journalEntry._id}&journalEntryName=${encodeURIComponent(journalEntry.entryName)}&journalEntryBody=${encodeURIComponent(journalEntry.entryBody)}`;
     })
 
     entryRow.append(nameSpan);
