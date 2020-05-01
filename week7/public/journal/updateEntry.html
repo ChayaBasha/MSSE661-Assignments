@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/grid.css">
+        <link rel="stylesheet" type="text/css" href="../css/forms.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/journalEntry.css">
+
+        <body class="container">
+            <div class="header">
+                My Journal Keeper
+
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li id="logout"><a href="/" onclick="doLogout(event)">Logout</a></li> 
+                </ul>
+            </div>
+           
+            <div class="mainContent">
+                <h1> Change can be a good thing</h1>
+                <div class="journalNav">
+                    <a href="./journal.html"><i class="fa fa-backward"> </i> </a>
+                    <i class="fa fa-plus" onclick="doAddJournalEntry(event)"></i>
+                    </div>
+                    <form>
+                   <label for="entryName"></label>
+                   <textarea class="journalName" type="text" id="entryName" journalEntryName="entryName"></textarea>
+
+                   <br>
+                   <label for="entryBody"></label>
+                   <textarea class="journalBody" type="text" id="entryBody" name="entryBody" placeholder="what's on your mind"></textarea>
+                   </form>
+                   <br>
+                   
+             </div>
+           
+            <div class="footer">
+                Auhtor: Johanna Blumenthal
+            </div>
+            <script src="../src/api.config.js"></script>
+            <script src="../src/simple-storage.js"></script>
+            <script src="../src/service-helpers.js"></script>
+            <script src="../src/auth.service.js"></script>
+            <script src="../src/access.js"></script>
+            <script src="../src/route-guard.js"></script>
+            <script src="./journal-api.service.js"></script>
+            <script src="./journal.service.js"></script>
+            <script src="./journalEntry.js"></script>
+            <script src="../app.js"></script>
+            
+       
+        
+        </body>
+    </head>
+</html>

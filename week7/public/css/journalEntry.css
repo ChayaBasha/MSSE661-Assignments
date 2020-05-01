@@ -1,4 +1,4 @@
-.journalEntry-li{
+/* .journalEntry-li{
     margin: 4px;
     width: 100%;
     padding: .5em;
@@ -6,7 +6,7 @@
     padding: 4px;
     cursor: pointer;
 }
-.journalEntry-li li:hover {
+button :hover {
     color: rgb(221, 107, 177);
     background-color: #DDD;
     left: 2px;
@@ -15,17 +15,20 @@
   .journalEntry-li li.selected {
     background-color: rgb(19, 101, 136);
     color: white;
-  }
+  } */
 
- 
 .journalEntry-block{
 
  display: flex;
  width: 100%;
 align-items: baseline;
-justify-content: space-between;
+justify-content: space-around;
 }
-.journalEntry-name {
+
+button {
+    color: rgb(214, 103, 241);
+}
+/* .journalEntry-name {
     padding: 8px;
     font-size: 1.5em;
 }
@@ -33,12 +36,13 @@ justify-content: space-between;
 .journalEntry-date {
    width: 40%;
    text-align: left;
-}
+} */
 
 .journalNav {
     width: 100%;
-    justify-self: space-around;
+    justify-content: space-around;
     height: fit-content;
+    display: flex;
 }
 
 .journalName {
@@ -50,4 +54,7 @@ justify-content: space-between;
     height: 40em;
     box-sizing: border-box;
     
+}
+.journalEntryName {
+    color: rgb(214, 103, 241);
 }
