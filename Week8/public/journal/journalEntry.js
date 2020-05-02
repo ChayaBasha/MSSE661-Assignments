@@ -13,7 +13,6 @@ function showJournalEntryBody(journalEntryBody) {
 };
 
 
-
 const urlParams = new URLSearchParams(window.location.search);
 const journalEntryName = urlParams.get('journalEntryName');
 const journalEntryBody = urlParams.get('journalEntryBody');
@@ -23,7 +22,16 @@ showJournalEntryName(journalEntryName);
 showJournalEntryBody(journalEntryBody);
 
 
-function showJournalEntry(journalEntryId) {
-  window.location.href=`./updateEntry.html?journalEntryId=${journalEntryId}`;
+function doEditJournalEntry() {
+window.location.href = `./updateEntry.html?journalEntryId=${encodeURIComponent(journalEntryId)}&journalEntryName=${encodeURIComponent(journalEntryName)}&journalEntryBody=${encodeURIComponent(journalEntryBody)}`;
 };
+
+const updateButton = document.getElementById('updateButton');
+if(updateButton) {
+  updateButton.onclick = () => {
+    doEditJournalEntry();
+  }
+}
+
+
 

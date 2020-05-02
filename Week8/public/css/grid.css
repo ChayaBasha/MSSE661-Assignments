@@ -1,0 +1,106 @@
+html {
+    min-height: 100%;
+
+}
+body {
+    padding:15px;
+}
+.container {
+    display: grid;
+    grid-template-columns: [first] 20% [second] 20% [third] auto [fourth] 20% [fifth] 20%;
+    grid-template-rows:[row1] 8% [row2] 6% [row3] auto [row4] 20% [row5] 10%;
+    background-color: rgb(245, 220, 456);
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    grid-gap: 15px;
+
+}
+
+.container > div {
+    background-color: rgba(121, 252, 191,.5);
+    color: rgb(214, 103, 241);
+    padding: 4px;
+    line-height: 175%;
+}
+
+.header {
+    grid-column: 1/6;
+    grid-row-start: row1;
+    grid-row-end: row2;
+    font-size:32px;
+    font-family:cursive;
+    text-align: center; 
+  
+}
+
+.navBar {
+    grid-column: 1/6;
+    grid-row: 2/3;
+    background-color: rgb(127, 209, 171);
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+.navBar ul {
+    display: inline-block;
+}
+
+.navBar li {
+    display:inline-block;
+    padding: 8px 8px 12px;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+ a {
+    text-decoration: none;
+}
+a:link {
+    color: rgb(214, 103, 241);
+}
+a:visited {
+    color: purple;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+
+a:hover {
+    background-color: darkcyan;
+
+}
+
+.mainContent {
+    grid-column:1/6;
+    grid-row:3/5;
+    font-family: fantasy;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+h1 {
+    font-size: 2em;
+}
+
+.focusBox1 {
+    width: 50%;
+    position: left;
+    text-align: left;
+    padding: 2em;
+    list-style-type: none;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+.footer {
+    grid-column:1/6;
+    grid-row:5;
+    text-align: center;
+}
+
